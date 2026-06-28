@@ -74,7 +74,7 @@ const signupUser = async (req, res) => {
 
     // Role Validation
     if (role) {
-      if (role !== "student" && role !== "instructor") {
+      if (role !== "student" && role !== "instructor" && role!="admin") {
         return res.status(400).json({ msg: "Invalid Role" });
       }
     }
